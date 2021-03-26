@@ -17,13 +17,13 @@ export class CartSummaryComponent implements OnInit {
   ngOnInit(): void {
     this.getCart();
   }
-
+ 
   getCart() {
     this.cartItems = this.cartService.list();
   }
 
   removeFromCart(product:Product){
     this.cartService.removeFromCart(product);
-    this.toastrService.error("Silindi",product.productName + " sepetten silindi.")
+    this.toastrService.error( "sepetten silindi."+"Silindi",product.productName)
   }
 }
